@@ -108,21 +108,21 @@
 		<key>getUserStream</key>
 		<dict>
 			<key>routeFormat</key>
-			<string>/stream/0/posts/stream?access_token={accessToken}</string>
+			<string>/stream/0/posts/stream?count=200&amp;access_token={accessToken}</string>
 			<key>method</key>
 			<string>GET</string>
 		</dict>
 		<key>getUserStreamSince</key>
 		<dict>
 			<key>routeFormat</key>
-			<string>/stream/0/posts/stream?access_token={accessToken}&amp;since_id={since_id}</string>
+			<string>/stream/0/posts/stream?count=200&amp;access_token={accessToken}&amp;since_id={since_id}</string>
 			<key>method</key>
 			<string>GET</string>
 		</dict>
 		<key>getUserStreamBefore</key>
 		<dict>
 			<key>routeFormat</key>
-			<string>/stream/0/posts/stream?access_token={accessToken}&amp;before_id={before_id}</string>
+			<string>/stream/0/posts/stream?count=200&amp;access_token={accessToken}&amp;before_id={before_id}</string>
 			<key>method</key>
 			<string>GET</string>
 		</dict>

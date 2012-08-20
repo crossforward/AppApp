@@ -395,6 +395,17 @@
     
     // Do your async call here
     // This is just a dummy data loader:
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* userID = [defaults valueForKey:@"userID"];
+
+    [[ANAPICall sharedAppAPI] getUserFollowing:userID uiCompletionBlock:^(id dataObject, NSError *error) {
+        self.currentlyFollowing = [NSMutableArray arrayWithCapacity:[dataObject count]];
+        for(NSDictionary* user in dataObject) {
+            [self.currentlyFollowing addObject:[user valueForKey:@"username"]];
+        }
+    }];
+    
     [self performSelector:@selector(addItemsOnTop) withObject:nil afterDelay:2.0];
     // See -addItemsOnTop for more info on how to finish loading
     return YES;

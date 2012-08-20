@@ -25,6 +25,7 @@
 @property (nonatomic, readonly) NSString *sideMenuTitle;
 @property (nonatomic, readonly) NSString *sideMenuImageName;
 @property (nonatomic) UIView *currentToolbarView;
+@property (nonatomic) NSMutableArray* currentlyFollowing;
 
 - (BOOL)refresh;
 - (void)updateTopWithData:(id)dataObject;
